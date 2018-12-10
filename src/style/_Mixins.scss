@@ -1,0 +1,76 @@
+$darkblue: #0772A1;
+$mediumblue: #3BA3D0;
+$lightblue: #63AFD0;
+
+$green: #9bc53d;
+$darkgreen: #6c892a;
+
+$darkblack: #333333;
+
+// gradients
+
+// blue
+$grad-dark-medium: linear-gradient(-137deg, $darkblue 0%, $mediumblue 100%);
+$grad-light-medium: linear-gradient(-137deg, $lightblue 0%, $mediumblue 100%);
+$grad-light-dark: linear-gradient(-137deg, $lightblue 0%, $darkblue 100%);
+$grad-medium-dark: linear-gradient(-137deg, $mediumblue 0%, $darkblue 100%);
+
+
+@mixin colorgrad($color1, $color2) {
+	background-image: linear-gradient(-137deg, $color1 0%, $color2 100%);
+}
+
+// breakpoints
+$xs: 500px;
+$s: 800px;
+$m: 920px;
+$l: 1200px;
+$xl: 1400px;
+
+// font sizes
+$small: 14px;
+$normal: 20px;
+
+@mixin breakpoint($size) {
+	@media (min-width: $size ) {
+		@content;
+	}
+}
+
+@mixin boxshadow() {
+	box-shadow: 0 60px 120px rgba(71, 69, 123, .24), 0 15px 35px rgba(71, 69, 123, .24);
+}
+
+
+
+h1 {
+	font-size: 20px;
+	@include breakpoint($xs) {
+		font-size: 28px;
+	}
+}
+
+h2 {
+	font-size: 18px;
+	@include breakpoint($xs) {
+		font-size: 20px;
+	}
+}
+
+button {
+	cursor: pointer;
+	font-size: 16px;
+	@include breakpoint($xs) {
+		font-size: 18px;
+	}	
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;	
+	font-size: 14px;
+	@include breakpoint($xs) {
+		font-size: 16px;
+	}	
+}

@@ -1,0 +1,165 @@
+.CreateDayContainer {
+  margin-bottom: 15px;
+}
+
+.CreateDayBox {
+  @include colorgrad($darkblue, $mediumblue);
+  @include boxshadow();
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  .DayGrid {
+    background-color: transparent !important;
+  }
+  button {
+    background-color: $mediumblue;
+    color: white;
+    border: 2px solid $mediumblue;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    &:hover {
+      background-color: $darkblue;
+      border: 2px solid $darkblue;
+      color: white;
+    }    
+  }
+  input {
+    color: white;
+    background: $mediumblue;
+    //border: 1px solid white; 
+    &::placeholder {
+      font-style: italic;
+    }
+    &:focus {
+      background-color: $darkblue;
+      color: white;
+    }  
+    &[placeholder]:focus {
+      color: white;
+    }
+  }
+  .add-activity {
+    @include colorgrad($green, $darkgreen)
+    align-self: stretch;
+    &:hover {
+      background-image: none;
+      background-color: $green;
+      border: none;
+    }
+  }
+  .day-sidebar-item {
+    background-color: transparent !important;
+  }
+  .day-svg {
+    padding: 5px 0 !important;
+    svg {
+      border-radius: 50%;
+      color: white;
+      padding: 10px;
+    }
+  }
+  .day-date-container {
+    .day-sidebar-item {
+      h2 {
+        color: white;
+        padding: 5px 0;
+      }
+    }
+  }
+  .day-accommodation-container {
+    .day-sidebar-item {
+      .day-svg {
+        svg {
+          border: 3px solid $mediumblue;
+        }
+      }
+    }
+  }
+  .day-transport-container {
+    .day-sidebar-item {
+      .day-svg {
+        svg {
+          border: 3px solid $lightblue;
+        }
+      }
+    }
+  }  
+  .day-activity-container {
+    .day-sidebar-item {
+      .day-svg {
+        svg {
+          border: 3px solid $green;
+
+        }
+      }
+    }
+  }  
+}
+
+.CreateDayMenu {
+  display: flex;
+  flex-wrap: wrap;
+  //@include colorgrad($mediumblue, $lightblue);
+  justify-content: space-evenly;
+  align-items: center; 
+  z-index: 1;
+  h2 {
+    flex-basis: 100%;
+    text-align: center;
+    color: white;
+    margin: 8px 0;
+    display: none;
+    @include breakpoint($xs) {
+      flex-basis: auto;
+      display: initial;
+    }    
+  }
+  button {
+    margin: 8px 0;
+  }
+}
+
+
+.day-input {
+  grid-column: 1 / span 4;
+  display: flex;
+}
+
+.date-picker {
+  background-color: white;
+}
+
+.modal {
+  z-index: 2;
+  position: absolute;
+  top: -10px;
+  width: 300px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #3BA3D0;
+}
+
+.modal > .footer {
+  text-align: center;
+}
+
+.modal-close-btn {
+  
+}
+
+.DayPicker-wrapper {
+  padding-bottom: 0rem !important;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: #0772A1 !important;
+}
+
+.DayPicker-Day {
+  color: black;
+}
+
+.calendarBtn {
+  justify-self: start;
+}

@@ -1,0 +1,41 @@
+@import "./style/Mixins.scss";
+@import "./style/inputs.scss";
+@import "./style/NavBar.scss";
+@import "./style/CreateDayBox.scss";
+@import "./style/Day.scss";
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+body {
+  //background: url(beatles.jpg);
+  background-color: #F5F5F5;
+  background-attachment: fixed;
+  font-size: 16px;
+}
+
+#root {
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.App {
+	width: 320px;
+	margin: 0 3px;
+	@include breakpoint($xs) {
+		width: 500px;
+		margin: 0 10px;
+	}
+}
+
+.AppContainer {
+
+}
+
+
+

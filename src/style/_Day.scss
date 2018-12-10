@@ -1,0 +1,203 @@
+
+
+
+.DayGrid {
+  display: grid;
+  grid-template-areas: 
+    'day-date-container'
+    'day-accommodation-container'
+    'day-transport-container'
+    'day-activity-container';
+  background-color: rgba(247, 247, 247, 0.85);
+}
+
+.DayList {
+  .Day {
+    @include boxshadow();
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    .day-sidebar-item {
+      h2 {
+        padding: 20px 0px;    
+      }    
+    }
+  }
+}
+
+.Day {
+  position: relative;
+  border-radius: 5px;
+  button {
+    background-color: $mediumblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 1px;
+    &:hover {
+      background-color: $darkblue;
+    }
+  }
+  .DeleteButton {
+    background-color: red;
+    padding: 3px 10px;
+    &:hover {
+      background-color: red;
+    }
+  }  
+  .day-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+      'day-sidebar-item day-item';     
+  }
+  .day-date-container {
+    grid-area: day-date-container;
+    > .day-sidebar-item {
+      //border-top-left-radius: 15px;
+    }
+    .day-item {
+      justify-content: space-between;
+    }
+  }
+  .day-accommodation-container {
+    grid-area: day-accommodation-container;
+  }
+  .day-transport-container {
+    grid-area: day-transport-container;
+  }
+  .day-activity-container {
+    margin-bottom: 10px;
+    grid-area: day-activity-container;
+    display: grid;
+    grid-template-areas:
+      'day-sidebar-item day-item';
+      > .day-sidebar-item {
+        //border-bottom-left-radius: 15px; 
+      }
+      > .day-item {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
+        .day-input {
+          background-color: $mediumblue;
+          width: 72%;
+          border-radius: 5px;
+          input {
+            width: 75%;
+          }
+          button {
+            width: 25%;
+          }
+        }        
+      }
+  }
+  .day-sidebar-item {
+    background-color: white;
+    text-align: center;
+    height: 100%;
+    h2 {
+      margin: 0;
+      padding: 20px 0px; 
+      color: $darkblue    
+    }
+    .day-svg {
+      justify-self: stretch;
+      padding: 20px 0px; 
+      svg {
+        font-size: 22px;
+        @include breakpoint($xs) {
+          font-size: 30px;
+        }        
+      }
+    }
+  }
+  .day-item {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    padding-left: 5%;
+  }  
+}
+
+.fa-home {
+  color: $mediumblue;
+}
+
+.fa-car {
+  color: $lightblue;
+}
+
+.fa-heart {
+  color: $green;
+}
+
+.EditMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  .DeleteButton {
+    padding: 3px;
+  }
+}
+
+.AccommodationItem {
+  border-radius: 10px;
+  color: white;
+  @include colorgrad($mediumblue, $darkblue)
+  padding: 7px 20px 7px 20px;
+}
+
+.TransportItem {
+  border-radius: 10px;
+  color: white;
+  @include colorgrad($lightblue, $mediumblue)
+  padding: 7px 20px 7px 20px;
+}
+
+.ActivityListDay {
+  grid-column: 1 / span 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.ActivityItem {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 10px;
+  color: white;
+  @include colorgrad($green, $darkgreen)
+  padding: 7px 20px 7px 20px;
+  margin: 3px 6px 3px 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.ActivityDeleteButton {
+  color: white !important;
+  background-color: red !important;
+  border: none !important;
+  border-radius: 5px !important;
+  text-align: center;
+  padding: 2px 7px !important;  
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  z-index: 5;
+}
+
+.day-activity-input {
+  width: 290px;
+  border-radius: 10px;
+  color: white;
+  background-color: #9bc53d;
+  padding: 7px 20px 7px 20px;  
+  grid-column: 1 / span 4;
+}
+
+.day-activity-input > input {
+  width: 235px;
+}

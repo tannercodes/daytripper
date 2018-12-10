@@ -1,0 +1,399 @@
+h1 {
+  font-size: 20px; }
+  @media (min-width: 500px) {
+    h1 {
+      font-size: 28px; } }
+
+h2 {
+  font-size: 18px; }
+  @media (min-width: 500px) {
+    h2 {
+      font-size: 20px; } }
+
+button {
+  cursor: pointer;
+  font-size: 16px; }
+  @media (min-width: 500px) {
+    button {
+      font-size: 18px; } }
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px; }
+  @media (min-width: 500px) {
+    input {
+      font-size: 16px; } }
+
+.NavBarContainer {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; }
+
+.NavBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black; }
+  .NavBar h1 {
+    margin: 7px 0; }
+  .NavBar p {
+    margin: 0; }
+
+.daytripper span:nth-child(1) {
+  animation: colorchange 3s ease forwards infinite;
+  animation-delay: 0s;
+  color: #0772A1; }
+
+.daytripper span:nth-child(2) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 1s;
+  color: #3BA3D0; }
+
+.daytripper span:nth-child(3) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 2s;
+  color: #63AFD0; }
+
+.daytripper span:nth-child(4) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 3s;
+  color: #0772A1; }
+
+.daytripper span:nth-child(5) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 4s;
+  color: #3BA3D0; }
+
+.daytripper span:nth-child(6) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 5s;
+  color: #63AFD0; }
+
+.daytripper span:nth-child(7) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 6s;
+  color: #0772A1; }
+
+.daytripper span:nth-child(8) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 7s;
+  color: #3BA3D0; }
+
+.daytripper span:nth-child(9) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 8s;
+  color: #63AFD0; }
+
+.daytripper span:nth-child(10) {
+  animation: colorchange 5s ease forwards infinite;
+  animation-delay: 9s;
+  color: #0772A1; }
+
+@keyframes colorchange {
+  0% {
+    color: #0772A1; }
+  33% {
+    color: #3BA3D0; }
+  67% {
+    color: #63AFD0; }
+  100% {
+    color: #0772A1; } }
+
+@keyframes bgcolorchange {
+  0% {
+    background-color: #0772A1; }
+  33% {
+    background-color: #3BA3D0; }
+  67% {
+    background-color: #63AFD0; }
+  100% {
+    background-color: #0772A1; } }
+
+.CreateDayContainer {
+  margin-bottom: 15px; }
+
+.CreateDayBox {
+  background-image: linear-gradient(-137deg, #0772A1 0%, #3BA3D0 100%);
+  box-shadow: 0 60px 120px rgba(71, 69, 123, 0.24), 0 15px 35px rgba(71, 69, 123, 0.24);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; }
+  .CreateDayBox .DayGrid {
+    background-color: transparent !important; }
+  .CreateDayBox button {
+    background-color: #3BA3D0;
+    color: white;
+    border: 2px solid #3BA3D0;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer; }
+    .CreateDayBox button:hover {
+      background-color: #0772A1;
+      border: 2px solid #0772A1;
+      color: white; }
+  .CreateDayBox input {
+    color: white;
+    background: #3BA3D0; }
+    .CreateDayBox input::placeholder {
+      font-style: italic; }
+    .CreateDayBox input:focus {
+      background-color: #0772A1;
+      color: white; }
+    .CreateDayBox input[placeholder]:focus {
+      color: white; }
+  .CreateDayBox .add-activity {
+    background-image: linear-gradient(-137deg, #9bc53d 0%, #6c892a 100%);
+    align-self: stretch; }
+    .CreateDayBox .add-activity:hover {
+      background-image: none;
+      background-color: #9bc53d;
+      border: none; }
+  .CreateDayBox .day-sidebar-item {
+    background-color: transparent !important; }
+  .CreateDayBox .day-svg {
+    padding: 5px 0 !important; }
+    .CreateDayBox .day-svg svg {
+      border-radius: 50%;
+      color: white;
+      padding: 10px; }
+  .CreateDayBox .day-date-container .day-sidebar-item h2 {
+    color: white;
+    padding: 5px 0; }
+  .CreateDayBox .day-accommodation-container .day-sidebar-item .day-svg svg {
+    border: 3px solid #3BA3D0; }
+  .CreateDayBox .day-transport-container .day-sidebar-item .day-svg svg {
+    border: 3px solid #63AFD0; }
+  .CreateDayBox .day-activity-container .day-sidebar-item .day-svg svg {
+    border: 3px solid #9bc53d; }
+
+.CreateDayMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1; }
+  .CreateDayMenu h2 {
+    flex-basis: 100%;
+    text-align: center;
+    color: white;
+    margin: 8px 0;
+    display: none; }
+    @media (min-width: 500px) {
+      .CreateDayMenu h2 {
+        flex-basis: auto;
+        display: initial; } }
+  .CreateDayMenu button {
+    margin: 8px 0; }
+
+.day-input {
+  grid-column: 1 / span 4;
+  display: flex; }
+
+.date-picker {
+  background-color: white; }
+
+.modal {
+  z-index: 2;
+  position: absolute;
+  top: -10px;
+  width: 300px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #3BA3D0; }
+
+.modal > .footer {
+  text-align: center; }
+
+.DayPicker-wrapper {
+  padding-bottom: 0rem !important; }
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: #0772A1 !important; }
+
+.DayPicker-Day {
+  color: black; }
+
+.calendarBtn {
+  justify-self: start; }
+
+.DayGrid {
+  display: grid;
+  grid-template-areas: 'day-date-container' 'day-accommodation-container' 'day-transport-container' 'day-activity-container';
+  background-color: rgba(247, 247, 247, 0.85); }
+
+.DayList .Day {
+  box-shadow: 0 60px 120px rgba(71, 69, 123, 0.24), 0 15px 35px rgba(71, 69, 123, 0.24);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px; }
+  .DayList .Day .day-sidebar-item h2 {
+    padding: 20px 0px; }
+
+.Day {
+  position: relative;
+  border-radius: 5px; }
+  .Day button {
+    background-color: #3BA3D0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 1px; }
+    .Day button:hover {
+      background-color: #0772A1; }
+  .Day .DeleteButton {
+    background-color: red;
+    padding: 3px 10px; }
+    .Day .DeleteButton:hover {
+      background-color: red; }
+  .Day .day-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 'day-sidebar-item day-item'; }
+  .Day .day-date-container {
+    grid-area: day-date-container; }
+    .Day .day-date-container .day-item {
+      justify-content: space-between; }
+  .Day .day-accommodation-container {
+    grid-area: day-accommodation-container; }
+  .Day .day-transport-container {
+    grid-area: day-transport-container; }
+  .Day .day-activity-container {
+    margin-bottom: 10px;
+    grid-area: day-activity-container;
+    display: grid;
+    grid-template-areas: 'day-sidebar-item day-item'; }
+    .Day .day-activity-container > .day-item {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(4, 1fr); }
+      .Day .day-activity-container > .day-item .day-input {
+        background-color: #3BA3D0;
+        width: 72%;
+        border-radius: 5px; }
+        .Day .day-activity-container > .day-item .day-input input {
+          width: 75%; }
+        .Day .day-activity-container > .day-item .day-input button {
+          width: 25%; }
+  .Day .day-sidebar-item {
+    background-color: white;
+    text-align: center;
+    height: 100%; }
+    .Day .day-sidebar-item h2 {
+      margin: 0;
+      padding: 20px 0px;
+      color: #0772A1; }
+    .Day .day-sidebar-item .day-svg {
+      justify-self: stretch;
+      padding: 20px 0px; }
+      .Day .day-sidebar-item .day-svg svg {
+        font-size: 22px; }
+        @media (min-width: 500px) {
+          .Day .day-sidebar-item .day-svg svg {
+            font-size: 30px; } }
+  .Day .day-item {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    padding-left: 5%; }
+
+.fa-home {
+  color: #3BA3D0; }
+
+.fa-car {
+  color: #63AFD0; }
+
+.fa-heart {
+  color: #9bc53d; }
+
+.EditMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px; }
+  .EditMenu .DeleteButton {
+    padding: 3px; }
+
+.AccommodationItem {
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(-137deg, #3BA3D0 0%, #0772A1 100%);
+  padding: 7px 20px 7px 20px; }
+
+.TransportItem {
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(-137deg, #63AFD0 0%, #3BA3D0 100%);
+  padding: 7px 20px 7px 20px; }
+
+.ActivityListDay {
+  grid-column: 1 / span 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between; }
+
+.ActivityItem {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(-137deg, #9bc53d 0%, #6c892a 100%);
+  padding: 7px 20px 7px 20px;
+  margin: 3px 6px 3px 3px;
+  position: relative;
+  z-index: 1; }
+
+.ActivityDeleteButton {
+  color: white !important;
+  background-color: red !important;
+  border: none !important;
+  border-radius: 5px !important;
+  text-align: center;
+  padding: 2px 7px !important;
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  z-index: 5; }
+
+.day-activity-input {
+  width: 290px;
+  border-radius: 10px;
+  color: white;
+  background-color: #9bc53d;
+  padding: 7px 20px 7px 20px;
+  grid-column: 1 / span 4; }
+
+.day-activity-input > input {
+  width: 235px; }
+
+:focus {
+  outline: none; }
+
+::-moz-focus-inner {
+  border: 0; }
+
+body {
+  background-color: #F5F5F5;
+  background-attachment: fixed;
+  font-size: 16px; }
+
+#root {
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center; }
+
+.App {
+  width: 320px;
+  margin: 0 3px; }
+  @media (min-width: 500px) {
+    .App {
+      width: 500px;
+      margin: 0 10px; } }

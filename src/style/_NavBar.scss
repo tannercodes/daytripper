@@ -1,0 +1,108 @@
+.NavBarContainer {
+	background-color: white;
+	color: black;
+	padding: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;	
+}
+
+.NavBar {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: black;
+	h1 {
+		margin: 7px 0;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+@mixin colorchanges($seconds, $delay) {
+	animation: colorchange $seconds ease forwards infinite;
+	animation-delay: $delay;
+}
+
+.daytripper {
+	// d
+	span:nth-child(1) {
+		@include colorchanges(3s, 0s);
+		color: $darkblue
+	}
+	// a
+	span:nth-child(2) {
+		@include colorchanges(5s, 1s);
+		color: $mediumblue
+	}
+	// y
+	span:nth-child(3) {
+		@include colorchanges(5s, 2s);
+		color: $lightblue
+	}
+	// t
+	span:nth-child(4) {
+		@include colorchanges(5s, 3s);
+		color: $darkblue
+	}
+	// r
+	span:nth-child(5) {
+		@include colorchanges(5s, 4s);
+		color: $mediumblue
+	}
+	// i
+	span:nth-child(6) {
+		@include colorchanges(5s, 5s);
+		color: $lightblue
+	}
+	// p
+	span:nth-child(7) {
+		@include colorchanges(5s, 6s);
+		color: $darkblue
+	}
+	// p
+	span:nth-child(8) {
+		@include colorchanges(5s, 7s);
+		color: $mediumblue
+	}
+	// e
+	span:nth-child(9) {
+		@include colorchanges(5s, 8s);
+		color: $lightblue
+	}
+	// r
+	span:nth-child(10) {
+		@include colorchanges(5s, 9s);
+		color: $darkblue
+	}						
+}
+
+@keyframes colorchange {
+  0% {
+    color: $darkblue;
+  }
+  33% {
+    color: $mediumblue;
+  }
+  67% {
+    color: $lightblue;
+  }
+  100% {
+    color: $darkblue
+  }
+}
+
+@keyframes bgcolorchange {
+  0% {
+    background-color: $darkblue;
+  }
+  33% {
+    background-color: $mediumblue;
+  }
+  67% {
+    background-color: $lightblue;
+  }
+  100% {
+    background-color: $darkblue
+  }
+}
